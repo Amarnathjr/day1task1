@@ -1,0 +1,105 @@
+
+
+
+/*
+
+var :
+var it is functional block scope  if we delecred it on the function we can access every where with in function. and we can use it 
+as a block level scope. if we delecred outside function it will become gobal variable
+*/
+function example(){
+
+    if(true){
+var a=10;
+
+
+}
+console.log(a);
+};
+
+/*
+let :
+let is a block levelscope .we can reessign it the let variable.
+
+*/
+let a=10;
+a=20;
+console.log(a);
+
+
+/*
+const :
+const is also a block level scope but we cannot reassign  */
+const c=10;
+c=20;
+console.log(c);/*it will not work */
+
+
+
+/*
+let and const are the block level scope we have to delecred inside the block. we cannot use it in the inside the function
+
+*/
+function exampl1{
+    if(true){
+    let a=10;
+    const b=5;
+    console.log(a,b);
+    }
+    console.log(a,b);/*it will give error for this because it is block level scope */
+}
+
+
+
+
+
+
+/*
+primitive types  
+These are immutable and compared by value.
+primitive data types which is used to store only value for a varible we cannot store mutlipe values while using primitive datatypes.
+*/
+
+let str="amarnath";console.log(str);
+let number=123;
+let boolean =true;//false
+let x; // undefined
+let y = null;
+let big = 123n;
+let sym = Symbol("id");
+
+
+
+/*
+non primitive 
+
+these are mutables which we can change we can add multiple values in a set
+
+*/
+const person={
+    name:"amar"
+};
+console.log(person);
+
+
+
+/*
+An array is a special variable that can hold multiple values in a single variable.
+
+*/
+const arr=["item1","item2","item3"];
+console.log(arr);
+
+
+
+
+/*
+it is a block of code where we can perform our logic within that block
+*/
+
+
+
+function add(a,b){
+    return a+b;
+}
+console.log(add(5,10));
