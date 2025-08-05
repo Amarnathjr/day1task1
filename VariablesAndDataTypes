@@ -1,79 +1,80 @@
 
 
-
 /*
 
-var :
-var it is functional block scope  if we delecred it on the function we can access every where with in function. and we can use it 
-as a block level scope. if we delecred outside function it will become gobal variable
-*/
-function example(){
-
-    if(true){
-var a=10;
-
-
-}
-console.log(a);
-};
-
-/*
-let :
-let is a block levelscope .we can reessign it the let variable.
+var:
+. Function scoped
+. Accessible throughout the function
+. Can be re-declared and updated
+. If declared outside any function, becomes a global variable
 
 */
-let a=10;
-a=20;
-console.log(a);
-
-
-/*
-const :
-const is also a block level scope but we cannot reassign  */
-const c=10;
-c=20;
-console.log(c);/*it will not work */
-
-
-
-/*
-let and const are the block level scope we have to delecred inside the block. we cannot use it in the inside the function
-
-*/
-function exampl1{
-    if(true){
-    let a=10;
-    const b=5;
-    console.log(a,b);
+function example() {
+    if (true) {
+        var a = 10;
     }
-    console.log(a,b);/*it will give error for this because it is block level scope */
+    console.log("var a:", a); // Works because var is function scoped
 }
-
-
-
-
+example();
 
 
 /*
-primitive types  
-These are immutable and compared by value.
-primitive data types which is used to store only value for a varible we cannot store mutlipe values while using primitive datatypes.
+
+let:
+. Block scoped
+. Can be reassigned but not re-declared in the same block
 */
-
-let str="amarnath";console.log(str);
-let number=123;
-let boolean =true;//false
-let x; // undefined
-let y = null;
-let big = 123n;
-let sym = Symbol("id");
-
+let a = 10;
+a = 20;
+console.log("let a:", a); // 20
 
 
 /*
-non primitive 
 
-these are mutables which we can change we can add multiple values in a set
+const:
+. Block scoped
+. Cannot be reassigned or re-declared
+*/
+const c = 10;
+// c = 20; //Error: Assignment to constant variable
+console.log("const c:", c);
+
+
+/*
+
+let and const are block-scoped:
+. They are accessible only within the block they are declared in
+*/
+function example1() {
+    if (true) {
+        let a = 10;
+        const b = 5;
+        console.log("Inside block:", a, b); // 
+    }
+    // console.log(a, b); //  Error: a and b are not accessible here
+}
+example1();
+
+
+
+//Primitive Data Types
+
+
+let str = "amarnath";      // String
+let number = 123;    // Number
+let boolean = true;   // Boolean
+let x;        // undefined
+let y = null; // null
+let big = 123n; // BigInt
+let sym = Symbol("id"); // Symbol
+
+console.log(str, number, boolean, x, y, big, sym);
+
+
+//Non-Primitive Data Types
+non primitive 
+objects:
+these are mutables which we can change we can add multiple values in a set.where we can store key value pairs.
 
 */
 const person={
